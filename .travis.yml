@@ -78,6 +78,8 @@ before_script:
 
 script:
   - cd ${TRAVIS_BUILD_DIR}
+  - bison --version
+  - flex --version
   - ./configure --with-openssl --with-ldap --with-libcurl --prefix=${TRAVIS_BUILD_DIR}/gpsql
   - make
   - make install
