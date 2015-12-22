@@ -80,6 +80,8 @@ script:
   - cd ${TRAVIS_BUILD_DIR}
   - bison --version
   - flex --version
+  - md5sum src/backend/catalog/caql/scan.l
+  - cat src/backend/catalog/caql/scan.l
   - ./configure --with-openssl --with-ldap --with-libcurl --prefix=${TRAVIS_BUILD_DIR}/gpsql
   - make
   - make install
